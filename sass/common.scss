@@ -1,0 +1,163 @@
+@charset "utf-8";
+
+//reset
+html,
+body {
+    height: 100%;
+    word-break: keep-all;
+    -webkit-text-size-adjust: none; //텍스트 임의 조절 못하게 하는거
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    border: 0;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+textarea,
+p,
+blockquote,
+th,
+td,
+input,
+select,
+button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section,
+figcaption,
+figure,
+main {
+    display: block;
+}
+
+fieldset,
+img {
+    border: 0 none;
+}
+
+dl,
+ul,
+ol,
+menu,
+li {
+    list-style: none;
+}
+
+a {
+    -webkit-text-decoration: none;
+    cursor: pointer;
+}
+
+a:link,
+a:visited,
+a:active,
+a:hover {
+    text-decoration: none;
+    outline: none;
+}
+
+input,
+button,
+select {
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+button {
+    padding: 0;
+}
+
+ul,
+ol,
+dl {
+    list-style: none;
+}
+
+li {
+    list-style: none;
+}
+
+//common
+.mt5 {
+    margin-top: 5px;
+}
+
+.mt10 {
+    margin-top: 10px;
+}
+
+.pt5 {
+    padding-top: 5px;
+}
+
+.pt10 {
+    padding-top: 10px;
+}
+
+.mr10 {
+    margin-right: 10px;
+}
+
+.bdR3 {
+    border-radius: 3px;
+}
+
+.bdR17 {
+    border-radius: 17.5px;
+}
+
+.lineM15 {
+    border-bottom: 1px solid #dcdcdc;
+    margin: 15px 0;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+.screen_out {
+    overflow: hidden;
+    position: absolute;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}

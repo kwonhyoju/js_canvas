@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "node-sass": "^4.12.0",
+    "nodemon": "^1.19.2",
+    "sass": "^1.22.12"
+  },
+  "scripts": {
+    "build-css": "node-sass --include-path scss sass/index.scss css/index.css --source-map-root ./css --source-map-embed true --output-style compressed",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  }
+}
