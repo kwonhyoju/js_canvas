@@ -1,5 +1,9 @@
 const canvas = document.querySelector(".js_canvas");
 const colors = document.getElementsByClassName("js_colors");
+const range = document.querySelector(".jsRange");
+const modeBtn = document.querySelector(".jsMode");
+
+let FP_btn = true;
 
 const ctx = canvas.getContext('2d');
 canvas.width = 700;
@@ -22,7 +26,7 @@ function onMouseMove(event){
     const y = event.offsetY;
 
     if(!mouseStatu){
-        ctx.beginPath();
+        ctx.beginPath();    
         ctx.moveTo(x,y);
     }else{
         ctx.lineTo(x,y);
@@ -35,6 +39,21 @@ function handleColorClick(e){
     ctx.strokeStyle = changeColor;
 }
 
+function handleRangeChange(e){
+    const stroke = e.target.value;
+    ctx.lineWidth = stroke;
+}
+
+function handleModeChenge(){
+    if(FP_btn ===true){
+        FP_btn = false;
+        modeBtn.innerText="Paint";
+    }else{
+        FP_btn = true;
+        modeBtn.innerText="Fill";
+    }
+}
+
 
 if(canvas){
     canvas.addEventListener("mousemove",onMouseMove);
@@ -43,4 +62,15 @@ if(canvas){
     canvas.addEventListener("mouseleave",stopPainting);
 }
 
-Array.from(colors).forEach(item=>item.addEventListener("click",handleColorClick));
+if (colors){
+    Array.from(colors).forEach(item=>item.addEventListener("click",handleColorClick));    
+}
+
+
+if(range){
+    range.addEventListener("input",handleRangeChange);
+}
+
+if (modeBtn){
+    modeBtn.addEventListener("click",handleModeChenge);
+}
